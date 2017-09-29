@@ -1,0 +1,14 @@
+h1 {
+    text-align:center;
+}
+
+h1 {
+    color:darkred;
+    text-decoration: underline;
+}
+
+body {
+    background-color: lightseagreen;
+
+    background-image: url(https://static.pexels.com/photos/122458/pexels-photo-122458.jpeg);
+}

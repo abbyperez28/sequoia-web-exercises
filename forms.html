@@ -1,46 +1,71 @@
 <DOCTYPE! html>
 <html>
+
 <head>
     <meta charset="utf-8">
-    <title>Register With Us</title>
+    <title>Veridian Dynamics:Register With Us</title>
 </head>
 <body>
-    <form method="POST" action="https://requestb.in/1kwudki1">
 
-        <label for="email">Email</label>
-        <input id="email" name="email" type="text">
-        <br>
+    <main>
+        <h1>Register With Us</h1>
 
-        <label for="password">Password</label>
-        <input id="password" name="password" type="password">
-        <br>
+        <form method="POST" action="https://requestb.in/1kwudki1">
 
-        <label for="bio"><h4>Biography</h4></label>
-        <textarea id="bio" name "bio"></textarea>
+        <div>
+            <label for="email">Email</label>
+            <input id="email" type= "text" name="email" placeholder="Enter Email">
+        </div>
 
+        <div>
+            <label for="password">Password</label>
+            <input id="password" type= "password" name="password" placeholder="Enter Password">
+        </div>
 
-        <p>How did you hear about us?</p>
-        <label>
-            <input type="checkbox" name="q1" value="billboard">Billboard
-        </label>
-        <label>
-            <input type="checkbox" name="q1" value="radio advertisement">Radio Advertisement
-        </label>
-        <label>
-            <input type="checkbox" name="q1" value="internet advertisement">Internet Advertisement
-        </label>
-        <label>
-            <input type="checkbox" name="q1" value="other">Other
-        </label>
-        <br>
-        <br>
-        <label for="Webrowser">What browser are you using?</label>
+        <div>
+            <label for="bio"><h4>Biography</h4></label>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <br>
+            <br>
+        </div>
+
+         <fieldset>
+
+            <legend>How did you hear about us?</legend>
+            <label for="Billboard">
+                <input id="Billboard" type= "checkbox" name="q1" value="Billboard">Billboard
+            </label>
+             <br>
+            <label for="Radio Advertisement">
+                <input id="Radio Advertisement" type="checkbox" name="q1" value="Radio Advertisement">Radio Advertisement
+            </label>
+             <br>
+            <label for="Internet Advertisement">
+                <input id="Internet Advertisement" type="checkbox" name="q1" value="Internet Advertisement">Internet Advertisement
+            </label>
+             <br>
+            <label for="Other">
+                <input id="Other" type="checkbox" name="q1" value="other">Other
+            </label>
+
+         </fieldset>
+
+            <br>
+            <br>
+
+            <label for="Webrowser">What browser are you using?</label>
             <select id="webrowser" name="webrowser[]">
-                <option value="Chrome">Chrome</option>
-                <option value="Safari">Safari</option>
+                    <option value="Chrome">Chrome</option>
+                    <option value="Safari">Safari</option>
+                    <option value="FireFox">FireFoX</option>
             </select>
+
         <br>
         <br>
+
         <input type="submit">
-    </form>
+
+        </form>
+
+    </main>
 </body>
