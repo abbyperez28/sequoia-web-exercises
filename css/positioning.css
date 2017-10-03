@@ -1,0 +1,55 @@
+.box {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-right: 50px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    float: left;
+
+}
+
+img{
+    position: absolute;
+    top: -35px;
+    right: -35px;
+}
+
+.red{
+    background-color: red;
+    /*float: left;*/
+}
+
+.orange{
+    background-color: orange;
+    /*float: left;*/
+
+}
+
+.yellow{
+    background-color: yellow;
+    /*float: left;*/
+
+}
+
+.green{
+    background-color: green;
+    /*float: left;*/
+    clear: left;
+}
+
+.blue{
+    background-color: blue;
+    /*float: left;*/
+
+}
+
+.violet{
+    background-color: mediumpurple;
+    /*margin-left: 150px;*/
+    /*float: left;*/
+
+}
