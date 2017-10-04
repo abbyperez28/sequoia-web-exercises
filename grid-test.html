@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body {
+        margin: 0;
+        }
+
+        .container {
+        max-width: 1200px;
+        width: 80%;
+        background-color: powderblue;
+        margin: 0 auto;
+        padding: 10px;
+        }
+
+        row {
+            width: 100%;
+            background-color: lavender;
+        }
+
+        .row:after {
+            content: "";
+            clear: both;
+        }
+
+        .col-1 {
+            width: 10%;
+            float: left;
+            background-color: darkgreen;
+        }
+
+        .col-5 {
+            width: 50%;
+            float: left;
+            background-color: darkgreen;
+        }
+
+    </style>
+</head>
+<body>
+
+    <main class="container">
+
+        <div class=""row">
+            <h1>This is a row</h1>
+        </div>
+
+            <div class=""col-1">
+                <h1>This is a column</h1>
+            </div>
+
+    </main>
+
+</body>
+</html>
