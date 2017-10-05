@@ -16,3 +16,8 @@ h1 {
 .panel-default {
     text-color: darkblue;
 }
+
+.panel-footer {
+    text-align: right;
+}
+
