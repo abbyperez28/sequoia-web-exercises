@@ -1,0 +1,76 @@
+/*Remove the borders and background colors from your column classes. (grid ccS*/
+/*Remove any css that sets widths from media-queries.css*/
+/*Include your grid-layout.css file in media-queries.html*/
+/*Add the HTML elements necessary to apply your grid system to the page. You should not change any existing CSS at this point.*/
+
+body {
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.row {
+    width: 100%;
+    /*background-color: deeppink;*/
+    margin-bottom: 10px;
+}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.one-half {
+    width: 50%;
+    float: left;
+    /*background-color: darkgreen;*/
+}
+
+.one-third {
+    width: 33.33%;
+    float: left;
+    /*background-color: orange;*/
+}
+
+.one-fourth {
+    width: 25%;
+    float: left;
+    /*background-color: orchid;*/
+}
+
+.one-sixth {
+    width: 16.66%;
+    float: left;
+    /*background-color: deepskyblue;*/
+}
+
+.one-eighth {
+    width: 12.5%;
+    float: left;
+    /*background-color: yellow;*/
+}
+
+.box {
+    /*border: 1px solid black;*/
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        width: auto;
+    }
+
+    .one-half,.one-third,.one-fourth,.one-eighth {
+        width: 100%;
+    }
+}
+
+

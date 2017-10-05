@@ -6,23 +6,33 @@
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Media Queries</title>
+    <link rel="stylesheet" href="css/grid-layout.css">
     <link rel="stylesheet" href="css/media-queries.css">
 </head>
+
 <body>
+<div class="container">
     <div class="alert-info hidden-on-mobile">
         <a href="#main">Skip to main content</a>
     </div>
-    <h1>Company</h1>
-    <nav>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="row">
+        <div class="one-half box">
+            <h1>Company</h1>
+        </div>
+        <div class="one-half box">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
     <div class="header-img">
-        <img src="http://lorempixel.com/g/900/400" alt="">
+        <img src="http://lorempixel.com/g/900/400" class="row" alt="">
     </div>
     <section id="main" class="main">
         <h2>Main Section</h2>
@@ -38,5 +48,6 @@
 
         </div>
     </footer>
+</div>
 </body>
 </html>

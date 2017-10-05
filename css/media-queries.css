@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html,
 body{
     margin: 0;
@@ -6,6 +10,7 @@ body{
     font-family: sans-serif;
     padding: 5px;
 }
+
 
 h1 {
     text-align: center;
@@ -36,7 +41,7 @@ h1 {
 }
 
 .header-img img {
-    width: 100%;
+    /*width: 100%;*/
 }
 
 .sub-section {
@@ -47,7 +52,7 @@ h1 {
 @media screen and (min-width:768px){
     body{
         padding: 20px;
-        width: 100%;
+        /*width: 100%;*/
     }
 
     .alert-info {
@@ -72,12 +77,12 @@ h1 {
 
     .main {
     float: left;
-    width: 65%;
+    /*width: 65%;*/
     }
 
     .sub-section {
         float: right;
-        width: 33%;
+        /*width: 33%;*/
     }
 
 
