@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/order-pizza.css">
 </head>
 <body>
+<!--<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
 <nav class="navbar navbar-default">
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
@@ -31,16 +33,18 @@
     </div>
 </nav>
 
-    <div class="jumbotron">
+    <div class="jumbotron hidden-xs">
         <div id="pizza-header">
             <h1>Welcome to Pizza World!</h1>
         </div>
     </div>
 
+<form method="POST" action="https://requestb.in/1d31xm31">
+
     <div class="container">
         <h2>Build Your Own Pizza</h2>
             <ul class="nav nav-tabs">
-                <li role="presentation"><a href="#"> <span class="badge">1</span> Size and Crust</a></li>
+                <li role="presentation" class="active"><a href="#"> <span class="badge">1</span> Size and Crust</a></li>
                 <li role="presentation"><a href="#"> <span class="badge">2</span> Cheese and Sauce</a></li>
                 <li role="presentation"><a href="#"> <span class="badge">3</span> Toppings</a></li>
             </ul>
@@ -81,7 +85,7 @@
                 </div>
             </div>
             <div class="panel-footer">
-                <button class="btn btn-default" type="submit">Next Step
+                <button class="btn btn-info" type="submit">Next Step
                 <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
                 </button>
             </div>
@@ -126,14 +130,64 @@
                     </div>
 
         <div class="panel-footer">
-            <button class="btn btn-default" type="submit"> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Previous Step
+            <button class="btn btn-info" type="submit"> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Previous Step
             </button>
-            <button class="btn btn-default" type="submit">Next Step
+            <button class="btn btn-info" type="submit">Next Step
                 <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
             </button>
         </div>
     </div>
+    </div>
 
+<div class="panel panel-info">
+    <div class="panel-heading">Choose Toppings</div>
+    <div class="panel-body">
 
+        <div class="panel panel-default">
+            <div class="panel-heading">Choose Meat</div>
+            <div class="panel-body"></div>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-info">
+                    <label><input type="checkbox" name="optradio"> Beef</label>
+                </li>
+                <li class="list-group-item list-group-item-info">
+                    <label><input type="checkbox" name="optradio"> Ham</label>
+                </li>
+                <li class="list-group-item list-group-item-info">
+                    <label><input type="checkbox" name="optradio"> Philly Steak</label>
+                </li>
+                <li class="list-group-item list-group-item-info">
+                    <label><input type="checkbox" name="optradio"> Bacon</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Choose Non-Meats</div>
+            <div class="panel-body"></div>
+
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-info">
+                    <label><input type="checkbox" name="optradio"> Green Peppers</label>
+                </li>
+                <li class="list-group-item list-group-item-info">
+                    <label><input type="checkbox" name="optradio"> Mushrooms</label>
+                </li>
+                <li class="list-group-item list-group-item-info">
+                    <label><input type="checkbox" name="optradio"> Onions</label>
+                </li>
+                <li class="list-group-item list-group-item-info">
+                    <label><input type="checkbox" name="optradio"> Jalapeno Peppers</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="panel-footer">
+        <button class="btn btn-info" type="submit">Checkout
+            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+        </button>
+    </div>
+</form>
 </body>
 </html>
