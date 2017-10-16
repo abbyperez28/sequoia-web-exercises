@@ -171,40 +171,50 @@
  * return value.
  */
 
-// funtion calculateTotal(luckyNumber, total) {
-//     var discountPercentage;
-//     var discountedPrice;
-//
-//     switch(luckyNumber) {
-//         case 0:
-//             discountPercentage = 0;
-//             break;
-//         case 1:
-//             discountPercentage = .1;
-//             break;
-//         case 2:
-//             discountPercentage = .25;
-//             break;
-//         case 3:
-//             discountPercentage = .35;
-//             break;
-//         case 4:
-//             discountPercentage = .5;
-//             break;
-//         case 5:
-//             discountPercentage = 1;
-//             break;
-//     }
-//
-//     discountedPrice= total - (total * discountPercentage);
-//
-//
-//     return discountedPrice;
-// }
-//
-// console.log(calculateTotal(0,100));
-// console.log(calculateTotal(4,100));
-// console.log(calculateTotal(5,100));
+function calculateTotal(luckyNumber, total) {
+    var discountPercentage;
+    var discountedPrice;
+
+    if (luckNumber < 0 || luckNumber > 5) {
+        return "Invalid lucky number given!";
+    }
+
+    discountPercentage = calculatePercentage(luckyNumber);
+    discountedPrice = total - (total * discountPercentage);
+
+    return discountedPrice;
+}
+
+    switch(luckyNumber) {
+        case 0:
+            discountPercentage = 0;
+            break;
+        case 1:
+            discountPercentage = .1;
+            break;
+        case 2:
+            discountPercentage = .25;
+            break;
+        case 3:
+            discountPercentage = .35;
+            break;
+        case 4:
+            discountPercentage = .5;
+            break;
+        case 5:
+            discountPercentage = 1;
+            break;
+    }
+
+    discountedPrice= total - (total * discountPercentage);
+
+
+    return discountedPrice;
+}
+
+console.log(calculateTotal(0,100));
+console.log(calculateTotal(4,100));
+console.log(calculateTotal(5,100));
 
 /**
  * TODO:
