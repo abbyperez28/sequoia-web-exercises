@@ -15,39 +15,39 @@
  *
  * Can you refactor your code to use functions?
  */
-
-function numberGuess(){
-    var answer =  confirm("Do you want to enter a number?");
-
-    if(answer == true);
-        var input = prompt("What is your number?");
-
-        if(isNaN(input)){
-            alert("That is not a number");
-        } else{
-
-            //alert 1
-            alert("The number plus 100 is " + (parseInt(input) + 100));
-
-            //alert2
-            if(input % 2 == 0){
-                alert("Your number is even");
-            } else{
-                alert("Your number is odd");
-            }
-
-            //alert3
-            if(Math.sign(input) == 1) {
-                alert("Your number is positive");
-            }else{
-                alert("Your number is negative");
-            }
-        }
-}
-
-
-
-numberGuess();
+//
+// function numberGuess(){
+//     var answer =  confirm("Do you want to enter a number?");
+//
+//     if(answer == true);
+//         var input = prompt("What is your number?");
+//
+//         if(isNaN(input)){
+//             alert("That is not a number");
+//         } else{
+//
+//             //alert 1
+//             alert("The number plus 100 is " + (parseInt(input) + 100));
+//
+//             //alert2
+//             if(input % 2 == 0){
+//                 alert("Your number is even");
+//             } else{
+//                 alert("Your number is odd");
+//             }
+//
+//             //alert3
+//             if(Math.sign(input) == 1) {
+//                 alert("Your number is positive");
+//             }else{
+//                 alert("Your number is negative");
+//             }
+//         }
+// }
+//
+//
+//
+// numberGuess();
 /* ########################################################################## */
 
 /**
@@ -67,14 +67,38 @@ numberGuess();
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color everytime the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
+// var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// var randomColor = colors[Math.floor(Math.random() * colors.length)];
+//************************************************************************************
+// function analyzeColor(colorName){
+//     var message = "";
+//
+//     if (colorName === 'blue'){
+//         message = "blue is the color of the sky";
+//     } else if (colorName === 'red'){
+//         message = "strawberries are red";
+//     } else {
+//         message = "I don't know anything about that color.";
+//     }
+//     return message;
+// }
+//
+// // console.log(analyzeColor("blue"));
+// // console.log(analyzeColor("red"));
+//
+// var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+// var randomColor = colors[Math.floor(Math.random() * colors.length)];
+//
+// console.log(analyzeColor(randomColor));
+
+
+
+
 /**
  * TODO:
  * Pass the `randomColor` variable to your function and console.log the results.
@@ -85,6 +109,26 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
+// function analyzeColor(colorName){
+//     var message = "";
+
+// switch(analyzeColor) {
+//     case "red":
+//         message = "strawberries are red";
+//         break;
+//     case "blue":
+//         message = "the sky is blue";
+//         break;
+//     case "cayan":
+//         message = "I dont know anything about cayan";
+//         break;
+//         default:
+//             message = "Not sure about that color";
+// // }
+//     return message;
+// }
+//
+// console.log(analyzeColor(randomColor));
 
 /**
  * TODO:
@@ -92,6 +136,18 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+// var userString = prompt("Pick a color");
+// function analyzeColor(colorName){
+//     if (colorName === 'blue'){
+//         alert ("blue is the color of the sky");
+//     } else if (colorName === 'red'){
+//         alert("strawberries are red");
+//     } else {
+//         alert("I don't know anything about cayan.");
+//     }
+// }
+//
+// console.log(analyzeColor(userString));
 
 /* ########################################################################## */
 
@@ -115,6 +171,41 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
+// funtion calculateTotal(luckyNumber, total) {
+//     var discountPercentage;
+//     var discountedPrice;
+//
+//     switch(luckyNumber) {
+//         case 0:
+//             discountPercentage = 0;
+//             break;
+//         case 1:
+//             discountPercentage = .1;
+//             break;
+//         case 2:
+//             discountPercentage = .25;
+//             break;
+//         case 3:
+//             discountPercentage = .35;
+//             break;
+//         case 4:
+//             discountPercentage = .5;
+//             break;
+//         case 5:
+//             discountPercentage = 1;
+//             break;
+//     }
+//
+//     discountedPrice= total - (total * discountPercentage);
+//
+//
+//     return discountedPrice;
+// }
+//
+// console.log(calculateTotal(0,100));
+// console.log(calculateTotal(4,100));
+// console.log(calculateTotal(5,100));
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -123,4 +214,14 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+
+var luckyNumber = Math.floor(Math.random() * 6);
+var totalBill = prompt("Please enter your total bill.");
+
+alert("Your lucky number is: " + luckyNumber);
+alert("YOur total bill before the discount is: " + totalBill);
+alert("Price after discount applied is: " + calculateTotal(luckyNumber, totalBill));
+
+
+
+
