@@ -15,8 +15,8 @@
         person.firstName = "Abby";
         person.lastName = "Perez";
 
-    // console.log(person.firstName);
-    // console.log(person.lastName);
+    console.log(person.firstName);
+    console.log(person.lastName);
 
     /**
      * TODO:
@@ -29,10 +29,10 @@
      */
 
         person.sayHello = function() {
-            return ("Hello from " + person.firstName + " " + person.lastName + "!")
+            return "Hello from " + person.firstName + " " + person.lastName + "!"
         };
 
-        // console.log(person.sayHello());
+        console.log(person.sayHello());
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -67,6 +67,20 @@
         }
         return console.log("Shopper: " + element.name + "|" + "Amount: " + element.amount + "|" + "Total: " + totalAmount);
     });
+
+
+
+    // add all the numbers with a forEach loop
+    // var numbers = [1, 2, 3];
+    // var total = 0;
+    //
+    // numbers.forEach(function(element, index, array){
+    //     total += element;
+    // });
+    //
+    // console.log(total);
+
+
 
 
     /** TODO:
@@ -164,5 +178,5 @@
      * - Create a function named `showBookInfo` that accepts a book object and
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
-
+     */
 })();
