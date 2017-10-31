@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Code Exercise</title>
+</head>
+<body>
+    <h1>Konami Code</h1>
+    <!--<form>-->
+        <!--<input type="text" id="konamicode" name="textfield" placeholder="Type Here"/>-->
+    <!--</form>-->
+    <div id=""key-display"></div>
+
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+    $(document).ready(function() {
+//        var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13]
+//    };
+//
+//    $("#konamicode").keydown(function (e) {
+        var keys = {
+            up: 38,
+            down: 40,
+            left: 37,
+            right: 39,
+            b: 66,
+            a: 65,
+            enter: 13
+        };
+
+        var konamiCode = [
+            keys.up,
+            keys.up,
+            keys.down,
+            keys.down,
+            keys.left,
+            keys.right,
+            keys.left,
+            keys.right,
+            keys.b,
+            keys.a,
+            keys.enter
+        ];
+
+        var codeIndex = 0;
+
+    $(document).on("keyup"), function(e) {
+        var keyPressed = e.KeyCode;
+        var currentKeyy =   konamiCode[codeIndez];
+    }
+
+
+//            var userInput = event.keyCode;
+//            console.log(userInput);
+
+//        var userKey = keyCode.e
+//        down[e.keyCode] = true;
+//        }).keyup(function(e) {
+//            if () {
+//                alert('You have added 30 lives!');
+//            }
+//            down[e.keyCode] = false;
+//        });
+////
+            console.log(event.keyCode);
+        });
+    });
+
+
+</script>
+</body>
+</html>
+
