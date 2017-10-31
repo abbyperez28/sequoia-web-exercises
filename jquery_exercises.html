@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery Exercises</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1 id="welcome">Welcome</h1>
+        <p id="paragraph">this is a paragraph</p>
+
+        <h1>JQuery Selectors</h1>
+        <div class="id selectors">
+            <p>This is a paragraph</p>
+            <ul>
+                <li>selector1</li>
+                <li>selector2</li>
+                <li>selector3</li>
+            </ul>
+        </div>
+    </div>
+
+
+<script src="./js/jquery-2.2.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+    "use strict";
+    $(document).ready();{
+
+        $("#welcome").css("color", "blue");
+
+        var contents = $("#welcome").html();
+        alert(contents);
+
+
+
+
+
+
+
+
+
+
+
+        $("h1").click(function() {
+    $("h1").css("background-color", "red");
+})
+
+
+$("p").dblclick(function() {
+    $(this).css("font-size" , "18px");
+})
+
+
+$("li").hover(function() {
+    $(this).css("color", "red");
+}, function() {
+    $(this).css("color" , "black");
+})
+
+
+
+
+
+    };
+</script>
+</body>
+</html>
