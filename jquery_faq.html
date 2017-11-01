@@ -61,6 +61,31 @@
     </dl>
 
     <a href="#" id="displayAnswers">View Answers</a>
+
+    <h3 id="national-parks-heading">National Parks</h3>
+    <ul id="national-parks">
+        <li>Arches</li>
+        <li>Badlands</li>
+        <li>Carlsbad Caverns</li>
+        <li>Denali</li>
+        <li>Everglades</li>
+    </ul>
+    <h3>State Parks of Texas</h3>
+    <ul id="state-parks-texas">
+        <li>Abilene</li>
+        <li>Big Bend</li>
+        <li>Choke Canyon</li>
+        <li>Davis Mountains</li>
+        <li>Enchanted Rock</li>
+    </ul>
+    <h3>The Missions of San Antonio</h3>
+    <ul id="state-parks-texas">
+        <li>San Jose</li>
+        <li>Concepcion</li>
+        <li>San Juan</li>
+        <li>Espada</li>
+    </ul>
+
 </main>
 
 <script src= "js/jquery-2.2.4.js"></script>
@@ -77,7 +102,13 @@
         $(e.target).css("background-color", "orange");
     });
 
+    $("dt").each(function(index, element){
+        console.log($(element).text());
     });
+
+//    .LAST --> YELLOW
+//    $( "li" ).last().css( "background-color", "yellow" );
+//    });
 </script>
 </body>
 </html>
