@@ -7,11 +7,15 @@
         .invisible {
             display: none;
         }
+        dt {
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 
 <main class="container">
+    <div><h1>Would you like to sign up for our newsletter? <span>X</span></h1></div>
     <h2>About the National Park Service</h2>
     <dl>
         <dt>Who is the director of the National Park Service?</dt>
@@ -72,7 +76,6 @@
     <a href="#" id="displayAnswers">View Answers</a>
 
     <h3 id="national-parks-heading">National Parks</h3>
-
     <ul id="national-parks">
         <li>Arches</li>
         <li>Badlands</li>
@@ -99,6 +102,11 @@
     </ul>
 
     <button id="highlightBtn">Highlight</button>
+
+    <!--<noscript>-->
+    <h2 id="hideh2">Register to our site</h2>
+    <!--</noscript>-->
+
 
 </main>
 
@@ -136,6 +144,21 @@
         $("li").click(function (e) {
             $(this).parent().children().first().css('color', 'blue');
         });
+
+        $("span").click(function(){
+            $('h1').hide();
+        });
+
+        $('ul').hide();
+
+            $("h3").click(function() {
+//                console.log($(this).next().text());
+                $(this).next().slideToggle();
+            });
+
+        $("#hideh2").hide().fadeIn(8000);
+//        $("#lead_form").delay(8000).fadeIn(400);
+//
 
     });
 </script>
