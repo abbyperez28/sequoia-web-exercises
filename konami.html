@@ -47,7 +47,19 @@
 
     $(document).on("keyup"), function(e) {
         var keyPressed = e.KeyCode;
-        var currentKeyy =   konamiCode[codeIndez];
+        var currentKeyy =   konamiCode[codeIndex];
+    };
+
+    $("#key-display").html(e.key);
+
+    if (keyPressed === currentKey) {
+        codeIndex++;
+    } else {
+        codeIndex = 0;
+    }
+
+    if (codeIndex === konamiCode.length) {
+        alert("30+ lives!");
     }
 
 
@@ -62,10 +74,8 @@
 //            }
 //            down[e.keyCode] = false;
 //        });
-////
-            console.log(event.keyCode);
+//            console.log(event.keyCode);
         });
-    });
 
 
 </script>
