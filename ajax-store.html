@@ -2,22 +2,36 @@
 <html>
 <head>
     <title>Online Store</title>
+    <link rel="shortcut icon" href="about:blank">
+
+
+    <style>
+
+        table, thead, tbody, tr, th, td  {
+            background-color: cornsilk;
+            border: 2px solid black;
+            margin-bottom: 5px;
+            padding: 10px;
+        }
+
+    </style>
 </head>
 <body>
+    <h1>My Tool Store</h1>
 
-<h1>My Tool Store</h1>
+    <table id="products">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Categories</th>
+            </tr>
+        </thead>
+        <tbody id="insertProducts"></tbody>
+    </table>
 
-<table id="products">
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Categories</th>
-        </tr>
-    </thead>
-    <tbody id="insertProducts"></tbody>
-</table>
+<button id="refresh">Refresh w/ AJAX</button>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
@@ -26,19 +40,57 @@ $(document).ready(function() {
     "use strict";
 
     // TODO: Create an ajax GET request for /data/inventory.json
-    $.ajax("./data/inventory.json").done(function(responseData) {
-        console.log(responseData);
-    });
+//    $.ajax("./data/inventory.json").done(function(responseData) {
+//        console.log(responseData);
+//    });
 
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
-    $.ajax("./data/inventory.json", {
-        type: "GET"
-    });
+
+//    $.ajax("./data/inventory.json").done(function (responseData) {
+//        console.log(responseData);
+//        buildHTML(responseData);
+//    });
+
+    function makeRequestAndUpdatePage() {
+        var ajaxRequest = $.ajax("./data/inventory.json");
+
+        ajaxRequest.done(function(data){
+                buildHTML(data);
+        });
+
+//        ajaxRequest.fail(function(jqXhr, status) {
+//            console.log(status + "request failed");
+//        });
+    };
+
+
+    function buildHTML(products) {
+        var productsHTML = "";
+
+        products.forEach(function(element) {
+
+            productsHTML += "<tr>";
+            productsHTML += "<td>" + element.title + "</td>";
+            productsHTML += "<td>" + element.quantity + "</td>";
+            productsHTML += "<td>" + element.price + "</td>";
+            productsHTML += "<td>" + element.categories + "</td>";
+            productsHTML += "</tr>";
+
+        });
+
+        $("#insertProducts").html(productsHTML);
+    };
+
+    $("#refresh").click(makeRequestAndUpdatePage);
 
 });
+
+
+
+
 </script>
 
 </body>
