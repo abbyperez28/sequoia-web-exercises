@@ -90,5 +90,5 @@
 // // ['Clean the car']
 
 var array = ['John', 'Paul', 'George', 'Ringo', 'Santana'];
-// array[array.length - 2];
+console.log(array.length - 2);
 
